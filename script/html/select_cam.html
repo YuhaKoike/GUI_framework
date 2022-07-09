@@ -1,0 +1,38 @@
+﻿<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="select_cam.css">
+    <title>select camera num</title>
+</head>
+<body>
+    <div class="box">
+        <section>
+
+            <font size="5">Bottom Camera: </font><font size="5" id="bottomcam">None</font>
+            <br />
+            <font size="5">Side &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Camera: </font><font size="5" id="sidecam">None</font>
+            <br />
+
+            <font size="5">Camera List</font>
+            <button onclick="load_camlist()" id='Load'>Load</button>
+            <button onclick="Enter()" disabled id='Enter'>Enter</button>
+            <font size="5" id="error" color="red"></font>
+
+            <table class="table_box" id="camlist">
+                <tr>
+                    <th width="40" id="ListNo">No</th>
+                    <th width="100" id="SerialNo">Serial No</th>
+                    <th id="DeviceName">Device Name</th>
+                    <th id="CameraClass">Camera Class</th>
+                    <th width="80" id="Select">Select</th>
+                </tr>
+            </table>
+
+        </section>
+    </div>
+
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="../js/select_cam.js"></script>
+</body>
+</html>

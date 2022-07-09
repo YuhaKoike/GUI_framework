@@ -1,0 +1,69 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="/eel.js"></script>
+    <title>Test</title>
+</head>
+<body>
+    <div class="box" id="BottomCam"></div>
+    </br>
+    <div class="box" id="SideCam"></div>
+    </br>
+    <div class="box" id="Record"></div>
+    <div class="box" id="Calibrationbox"></div>
+    <div class="box" id="main">
+        Monitor: 
+<select id='monitorselect' onchange='js2py(this.value, "Monitor")'><option id='DISPLAY1' value='DISPLAY1' >DISPLAY1</option>
+<option id='DISPLAY2' value='DISPLAY2' selected>DISPLAY2</option>
+</select>
+</br>Mode:
+<select id='modeselect' onchange='js2py(this.value, "Mode")'><option id='Grid' value='Grid' >Grid</option>
+<option id='FullScreen' value='FullScreen' >FullScreen</option>
+<option id='Square' value='Square' >Square</option>
+<option id='MultiPoints' value='MultiPoints' >MultiPoints</option>
+<option id='Sample' value='Sample' >Sample</option>
+<option id='Sample2' value='Sample2' >Sample2</option>
+<option id='frecpattern' value='frecpattern' >frecpattern</option>
+</select>
+<div id='Box_Control' style=''><div id='Box_Grid' style=''>
+<input type="checkbox" id="setupgrid" onchange='js2py(this.checked,"setupgrid")'><label for="setupgrid">Setup Grid</label>
+<br>
+Grid vertical:
+<input type='number' id='grid_num_v' value='10' onchange='js2py(this.value,"grid_num_v")'></input>
+<br>
+Grid horizontal:
+<input type='number' id='grid_num_h' value='10' onchange='js2py(this.value,"grid_num_h")'></input>
+<br></div>
+<div id='Box_FullScreen' style='display: none'></div>
+<div id='Box_Square' style='display: none'></div>
+<div id='Box_MultiPoints' style='display: none'>
+<input type="checkbox" id="setuppoints" onchange='js2py(this.checked,"setuppoints")' checked><label for="setuppoints">Setup Points</label></div>
+<div id='Box_Sample' style='display: none'></div>
+<div id='Box_Sample2' style='display: none'></div>
+<div id='Box_frecpattern' style='display: none'>
+<button type="button" onclick="test()">OK</button>
+
+
+<script>
+function test(){
+    alert("testes")
+}
+</script></div>
+</div>
+
+    </div>
+    <div class="box" id="Log">
+        <center>
+            Log
+            </br>
+            <textarea name="main_text" id="main_textarea" cols="70" rows="10"></textarea>
+        </center>
+        <br/>
+    </div>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript" src="../js/py2.js"></script>
+<script type="text/javascript" src="../js/js2py.js"></script>
+</body>
+</html>

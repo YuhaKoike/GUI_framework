@@ -1,0 +1,17 @@
+###monitorselect
+Monitor: 
+<select id='monitorselect' onchange='js2py(this.value, "Monitor")'>{% OPTIONS %}</select>
+###monitorselect
+
+###option
+<option id='{% ID %}' value='{% VALUE %}' {% SELECTED %}>{% NAME %}</option>
+###option
+
+###modeselect
+Mode:
+<select id='modeselect' onchange='js2py(this.value, "Mode")'>{% OPTIONS %}</select>
+###modeselect
+
+###div
+<div id='{% ID %}' style='{% STYLE %}'>{% CONTENTS %}</div>
+###div
